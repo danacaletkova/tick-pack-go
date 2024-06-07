@@ -1,39 +1,83 @@
 body {
+  font-family: "Quicksand", sans-serif;
   text-align: center;
-  padding: 4%;
-  width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  padding: 50px 25px;
+  background: radial-gradient(
+    780px at 37.8% 100.3%,
+    rgb(19, 55, 115) 2.2%,
+    rgb(32, 7, 80) 20.2%,
+    rgb(27, 88, 111) 58.6%,
+    rgb(115, 88, 44) 75%,
+    rgb(99, 19, 90) 89.6%,
+    rgb(12, 51, 76) 96.1%
+  );
 }
 
-.btn {
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 5px 15px;
-  margin: 10px;
+.container {
+  background: #fff;
+  padding: 20px;
+  margin: 50px auto;
+  max-width: 500px;
+  border-radius: 20px;
+}
+h1 {
+  font-size: 20px;
 }
 
-.list {
-  border: 1px solid black;
-  border-radius: 10px;
-  width: 50%;
-  margin: 0 auto;
+form {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 30px;
+  background: #eee;
+  margin: 20px 0;
 }
 
-.list-item {
+.input-text {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 0 25px;
+}
+
+.input-submit {
+  border: none;
+  outline: none;
+  color: white;
+  background: black;
+  border-radius: 30px;
+  padding: 10px 40px;
+  font-weight: 900;
+}
+
+ul li {
+  list-style: none;
   padding: 10px;
+  user-select: none;
+  cursor: pointer;
+}
+
+ul li::before {
+  content: "✓";
+  font-weight: 900;
+  border: 1px solid green;
+  border-radius: 400px;
+  color: white;
+  background: green;
   margin: 10px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
+  padding: 5px 10px;
 }
 
 footer {
-  padding: 20px;
+  padding: 20px 10px 0 10px;
   font-size: 12px;
 }
 
 footer a {
   color: #000;
   text-decoration: none;
+  transition: all 150ms ease;
 }
 
 footer a:hover {
