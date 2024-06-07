@@ -15,85 +15,43 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
-    <header>
-      <h1>Tick Pack Go</h1>
-      <h2>Where are you going?</h2>
-      <div class="py-4">
-        <div class="btn">Run</div>
-        <div class="btn">Gym</div>
-        <div class="btn">Shops</div>
-        <div class="btn">Library</div>
-        <div class="btn">Camping</div>
-      </div>
-    </header>
-    <main>
-      <div class="list">
-        <form action="">
-          <div class="list-item">
-            <input
-              type="checkbox"
-              name="list-item"
-              id="gym-shoes"
-              value="gym shoes"
-            />
-            <label for="gym-shoes">gym shoes</label>
-          </div>
-          <div class="list-item">
-            <input
-              type="checkbox"
-              name="list-item"
-              id="gym-clothes"
-              value="gym clothes"
-            />
-            <label for="gym-clothes">gym clothes</label>
-          </div>
-          <div class="list-item">
-            <input
-              type="checkbox"
-              name="list-item"
-              id="swimsuit"
-              value="swimsuit"
-            />
-            <label for="swimsuit">swimsuit</label>
-          </div>
-          <div class="list-item">
-            <input type="checkbox" name="list-item" id="towel" value="towel" />
-            <label for="towel">towel</label>
-          </div>
-          <div class="list-item">
-            <input
-              type="checkbox"
-              name="list-item"
-              id="sauna-towel"
-              value="sauna towel"
-            />
-            <label for="sauna-towel">sauna towel</label>
-          </div>
-          <div class="list-item">
-            <input
-              type="checkbox"
-              name="list-item"
-              id="fresh-clothes"
-              value="fresh clothes"
-            />
-            <label for="fresh-clothes">fresh clothes</label>
-          </div>
+    <div class="container">
+      <header>
+        <h1>my packing list</h1>
+      </header>
+      <main>
+        <form>
+          <input type="text" class="input-text" placeholder="Add an item" required/>
+          <input type="submit" class="input-submit" value="add"/>
         </form>
-      </div>
-    </main>
-    <footer>
-      <div>
-        <a href="https://github.com/danacaletkova/tick-pack-go" target="_blank"
-          >Open-sourced code</a
-        >
-        by
-        <a href="https://github.com/danacaletkova/" target="_blank"
-          >Dana Caletkova</a
-        >
-      </div>
-    </footer>
+        <ul>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+        </ul>
+      </main>
+      <footer>
+        <div>
+          <a
+            href="https://github.com/danacaletkova/tick-pack-go"
+            target="_blank"
+            >Open-sourced code</a
+          >
+          by
+          <a href="https://github.com/danacaletkova/" target="_blank"
+            >Dana Caletkova</a
+          >
+        </div>
+      </footer>
+    </div>
   </body>
 </html>
