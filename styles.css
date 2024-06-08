@@ -20,6 +20,7 @@ body {
   margin: 50px auto;
   max-width: 500px;
   border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px -20px 40px;
 }
 h1 {
   font-size: 20px;
@@ -51,22 +52,29 @@ form {
   font-weight: 900;
 }
 
-ul li {
-  list-style: none;
-  padding: 10px;
-  user-select: none;
-  cursor: pointer;
+.item-list {
+  text-align: left;
 }
 
-ul li::before {
-  content: "✓";
-  font-weight: 900;
-  border: 1px solid green;
-  border-radius: 400px;
-  color: white;
-  background: green;
-  margin: 10px;
-  padding: 5px 10px;
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  padding: 10px;
+}
+
+.fa-circle {
+  opacity: 0.3;
+}
+
+.fa-circle-check {
+  color: #1bffbc;
+}
+
+.fa-xmark {
+  opacity: 0.8;
 }
 
 footer {

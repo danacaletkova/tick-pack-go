@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tick Pack Go</title>
     <script
+      src="https://kit.fontawesome.com/3cd3489d31.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
@@ -30,14 +34,34 @@
       </header>
       <main>
         <form>
-          <input type="text" class="input-text" placeholder="Add an item" required/>
-          <input type="submit" class="input-submit" value="add"/>
+          <input
+            type="text"
+            class="input-text"
+            placeholder="Add an item"
+            required
+          />
+          <input type="submit" class="input-submit" value="add" />
         </form>
-        <ul>
-          <li>Item 1</li>
-          <li>Item 2</li>
-          <li>Item 3</li>
-        </ul>
+        <div class="item-list">
+          <div class="item">
+            <span
+              ><i class="fa-solid fa-circle fa-xl pe-2"></i>Item 1</span
+            >
+            <i class="fa-solid fa-xmark fa-xl"></i>
+          </div>
+          <div class="item">
+            <span
+              ><i class="fa-solid fa-circle-check fa-xl pe-2"></i>Item 1</span
+            >
+            <i class="fa-solid fa-xmark fa-xl"></i>
+          </div>
+          <div class="item">
+            <span
+              ><i class="fa-solid fa-circle-check fa-xl pe-2"></i>Item 1</span
+            >
+            <i class="fa-solid fa-xmark fa-xl"></i>
+          </div>
+        </div>
       </main>
       <footer>
         <div>
