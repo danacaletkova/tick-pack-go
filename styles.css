@@ -46,7 +46,7 @@ form {
   border: none;
   outline: none;
   color: white;
-  background: black;
+  background: #1bffbc;
   border-radius: 30px;
   padding: 10px 40px;
   font-weight: 900;
@@ -71,6 +71,12 @@ form {
 
 .fa-circle-check {
   color: #1bffbc;
+}
+
+.checked {
+  text-decoration: line-through;
+  text-decoration-color: #555;
+  color: #555;
 }
 
 .fa-xmark {
