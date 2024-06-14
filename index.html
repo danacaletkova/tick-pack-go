@@ -39,11 +39,12 @@
             class="input-text"
             placeholder="Add an item"
             required
+            id="input-text"
           />
-          <input type="submit" class="input-submit" value="add" />
+          <input type="submit" class="input-submit" value="add" id="input-submit" onclick="addItem()"/>
         </form>
-        <div class="item-list">
-          <div class="item">
+        <div class="item-list" id="item-list">
+          <!-- <div class="item">
             <span><i class="fa-solid fa-circle fa-xl pe-2"></i>Item 1</span>
             <i class="fa-solid fa-xmark fa-xl"></i>
           </div>
@@ -58,7 +59,7 @@
               ><i class="fa-solid fa-circle-check fa-xl pe-2"></i>Item 3</span
             >
             <i class="fa-solid fa-xmark fa-xl"></i>
-          </div>
+          </div> -->
         </div>
       </main>
       <footer>
@@ -75,5 +76,6 @@
         </div>
       </footer>
     </div>
+    <script src="/script.js"></script>
   </body>
 </html>
