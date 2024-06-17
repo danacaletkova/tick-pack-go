@@ -50,6 +50,11 @@ form {
   border-radius: 30px;
   padding: 10px 40px;
   font-weight: 900;
+  transition: all 200ms ease;
+}
+
+.input-submit:hover {
+  filter: hue-rotate(160deg);
 }
 
 .item-list {
@@ -81,6 +86,11 @@ form {
 
 .fa-xmark {
   opacity: 0.8;
+  transition: all 100ms ease;
+}
+
+.fa-xmark:hover {
+  color: #1bffbc;
 }
 
 footer {
@@ -91,7 +101,7 @@ footer {
 footer a {
   color: #000;
   text-decoration: none;
-  transition: all 150ms ease;
+  transition: all 100ms ease;
 }
 
 footer a:hover {
