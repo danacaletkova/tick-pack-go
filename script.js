@@ -1,15 +1,15 @@
-let inputButton = document.querySelector("#input-submit");
-let itemList = document.querySelector("#item-list");
-let inputText = document.querySelector("#input-text");
-
-function addItem(event) {
-  event.preventDefault();
-  console.log(inputText.value);
-  if (inputText.value === "") {
-    alert("You must enter something");
-  } else {
-    alert("this works");
+function addItem(item) {
+  if (item != undefined) {
+    let itemList = document.querySelector("#item-list");
+    itemList.innerHTML += `<div class="item"><span><i class="fa-solid fa-circle fa-xl pe-2"></i>${item}</span><i class="fa-solid fa-xmark fa-xl"></i></div>`;
   }
 }
 
-inputButton.addEventListener("click", addItem);
+function handleSubmit(event) {
+  event.preventDefault();
+  let inputText = document.querySelector("#input-text");
+  addItem(inputText.value);
+}
+
+let form = document.querySelector("#form");
+form.addEventListener("submit", handleSubmit);
