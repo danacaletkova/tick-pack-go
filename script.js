@@ -1,3 +1,11 @@
+function markChecked(event) {
+  console.log(event.target);
+  event.target.classList.toggle("checked");
+}
+
+let itemList = document.querySelector("#item-list");
+itemList.addEventListener("click", markChecked);
+
 function addItem(item) {
   if (item != undefined) {
     let itemList = document.querySelector("#item-list");
