@@ -65,9 +65,13 @@ form {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  cursor: pointer;
   user-select: none;
   padding: 10px;
+}
+
+.item span, .item i {
+  cursor: pointer;
+
 }
 
 .fa-circle {
@@ -80,8 +84,9 @@ form {
 
 .checked {
   text-decoration: line-through;
-  text-decoration-color: #555;
-  color: #555;
+  text-decoration-color: #999;
+  text-decoration-thickness: 1px;
+  color: #999;
 }
 
 .fa-xmark {

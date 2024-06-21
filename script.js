@@ -1,6 +1,20 @@
+// function changeIcon(element) {
+//   console.log(element);
+//     let uncheckedIcon = `<i class="fa-solid fa-circle fa-xl pe-2"></i>`;
+//     let checkedIcon = `<i class="fa-solid fa-circle-check fa-xl pe-2"></i>`;
+//     element.outerHTML = checkedIcon + element.outerHTML;
+//   }
+
 function markChecked(event) {
-  console.log(event.target);
-  event.target.classList.toggle("checked");
+  if (event.target.tagName === "SPAN") {
+    event.target.classList.toggle("checked");
+    // changeIcon(event.target);
+  } else if (
+    event.target.tagName === "I" &&
+    event.target.parentElement.tagName != "SPAN"
+  ) {
+    event.target.parentElement.remove();
+  }
 }
 
 let itemList = document.querySelector("#item-list");
@@ -9,7 +23,7 @@ itemList.addEventListener("click", markChecked);
 function addItem(item) {
   if (item != undefined) {
     let itemList = document.querySelector("#item-list");
-    itemList.innerHTML += `<div class="item"><span><i class="fa-solid fa-circle fa-xl pe-2"></i>${item}</span><i class="fa-solid fa-xmark fa-xl"></i></div>`;
+    itemList.innerHTML += `<div class="item"><span>${item}</span><i class="fa-solid fa-xmark fa-xl"></i></div>`;
   }
 }
 
