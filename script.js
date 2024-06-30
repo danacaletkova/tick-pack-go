@@ -1,29 +1,33 @@
-// function changeIcon(element) {
-//   console.log(element);
-//     let uncheckedIcon = `<i class="fa-solid fa-circle fa-xl pe-2"></i>`;
-//     let checkedIcon = `<i class="fa-solid fa-circle-check fa-xl pe-2"></i>`;
-//     element.outerHTML = checkedIcon + element.outerHTML;
-//   }
+function handleIcon(item) {
+  let itemLine = item.parentElement;
+  let checkedIcon = itemLine.querySelector("#checked-icon");
+  checkedIcon.classList.toggle("hidden");
+  let uncheckedIcon = itemLine.querySelector("#unchecked-icon");
+  uncheckedIcon.classList.toggle("hidden");
+}
 
-function markChecked(event) {
+function handleText(item) {
+  let itemLine = item.parentElement;
+  let itemText = itemLine.querySelector("#item-text");
+  itemText.classList.toggle("checked");
+}
+
+function handleItemClick(event) {
   if (event.target.tagName === "SPAN") {
-    event.target.classList.toggle("checked");
-    // changeIcon(event.target);
-  } else if (
-    event.target.tagName === "I" &&
-    event.target.parentElement.tagName != "SPAN"
-  ) {
+    handleIcon(event.target);
+    handleText(event.target);
+  } else if (event.target.tagName === "I") {
     event.target.parentElement.remove();
   }
 }
 
 let itemList = document.querySelector("#item-list");
-itemList.addEventListener("click", markChecked);
+itemList.addEventListener("click", handleItemClick);
 
 function addItem(item) {
   if (item != undefined) {
     let itemList = document.querySelector("#item-list");
-    itemList.innerHTML += `<div class="item"><span>${item}</span><i class="fa-solid fa-xmark fa-xl"></i></div>`;
+    itemList.innerHTML += `<div class="item"><span><span id="checked-icon" class="hidden">✅ </span><span id="unchecked-icon">⬜ </span><span id="item-text">${item}</span></span><i class="fa-solid fa-xmark fa-xl"></i></div>`;
   }
 }
 
