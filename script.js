@@ -7,7 +7,7 @@ function handleIcon(item) {
 }
 
 function handleText(item) {
-  let itemLine = item.parentElement;
+  let itemLine = item.parentElement.parentElement;
   let itemText = itemLine.querySelector("#item-text");
   itemText.classList.toggle("checked");
 }
