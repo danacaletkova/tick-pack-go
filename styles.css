@@ -69,9 +69,9 @@ form {
   padding: 10px;
 }
 
-.item span, .item i {
+.item span,
+.item i {
   cursor: pointer;
-
 }
 
 .fa-circle {
@@ -115,4 +115,25 @@ footer a:hover {
 
 .hidden {
   display: none;
+}
+
+@media (max-width: 440px) {
+  form {
+    display: block;
+    border-radius: 0;
+    background-color: transparent;
+  }
+
+  .input-text {
+    width: 100%;
+    margin-bottom: 6px;
+    background: #eee;
+    padding: 10px 40px;
+    border-radius: 30px;
+    text-align: center;
+  }
+
+  .input-submit {
+    width: 100%;
+  }
 }
