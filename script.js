@@ -27,7 +27,7 @@ itemList.addEventListener("click", handleItemClick);
 
 function addItem(item) {
   if (item != undefined) {
-    itemList.innerHTML += `<div class="item"><span><span id="checked-icon" class="hidden">✅ </span><span id="unchecked-icon">⬜ </span><span id="item-text">${item}</span></span><i class="fa-solid fa-xmark fa-xl"></i></div>`;
+    itemList.innerHTML += `<div class="item"><span class="item-left"><span><span id="checked-icon" class="hidden">✅ </span><span id="unchecked-icon">⬜ </span></span><span class="item-text" id="item-text">${item}</span></span><i class="fa-solid fa-xmark fa-xl"></i></div>`;
   }
 }
 

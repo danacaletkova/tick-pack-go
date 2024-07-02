@@ -64,9 +64,10 @@ form {
 .item {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   user-select: none;
   padding: 10px;
+  word-break: break-all;
 }
 
 .item span,
@@ -74,12 +75,12 @@ form {
   cursor: pointer;
 }
 
-.fa-circle {
-  opacity: 0.3;
+.item-left {
+  display: flex;
 }
 
-.fa-circle-check {
-  color: #1bffbc;
+.item-text {
+  padding: 0 10px;
 }
 
 .checked {
@@ -90,6 +91,8 @@ form {
 }
 
 .fa-xmark {
+  line-height: 16px;
+  padding: 4px;
   opacity: 0.8;
   transition: all 100ms ease;
 }
