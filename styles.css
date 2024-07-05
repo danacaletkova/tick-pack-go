@@ -84,6 +84,17 @@ form {
   filter: hue-rotate(160deg);
 }
 
+.reset {
+  text-align: right;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  opacity: 0.5;
+  margin-bottom: 10px;
+  width: fit-content;
+}
+
 .item-list {
   text-align: left;
 }
@@ -98,7 +109,8 @@ form {
 }
 
 .item span,
-.item i {
+.item i,
+.reset {
   cursor: pointer;
 }
 

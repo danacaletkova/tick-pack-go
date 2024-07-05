@@ -1,3 +1,5 @@
+//adding items via form
+
 function handleIcon(item) {
   let itemLine = item.parentElement;
   let checkedIcon = itemLine.querySelector("#checked-icon");
@@ -53,7 +55,7 @@ function showData() {
 
 showData();
 
-//buttons
+//adding items via buttons
 
 const buttonsData = {
   "btn-gym": [
@@ -115,4 +117,10 @@ let buttons = document.querySelector("#buttons");
 let btns = buttons.querySelectorAll("button");
 btns.forEach((btn) => {
   btn.addEventListener("click", handleBtnClick);
+});
+
+let resetBtn = document.querySelector("#reset");
+resetBtn.addEventListener("click", function () {
+  itemList.innerHTML = "";
+  saveData();
 });
