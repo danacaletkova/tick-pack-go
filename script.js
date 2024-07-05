@@ -37,6 +37,7 @@ function handleSubmit(event) {
   addItem(inputText.value);
   inputText.value = null;
   saveData();
+  inputText.focus();
 }
 
 let form = document.querySelector("#form");
