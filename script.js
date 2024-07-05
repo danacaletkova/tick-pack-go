@@ -52,3 +52,68 @@ function showData() {
 }
 
 showData();
+
+//buttons
+
+const buttonsData = {
+  "btn-gym": [
+    "shoes",
+    "clothes",
+    "fresh clothes",
+    "towel",
+    "swimsuit",
+    "sauna towel",
+    "headphones",
+    "phone",
+    "chip",
+    "watter bottle",
+    "driver's license",
+    "car keys",
+  ],
+  "btn-library": [
+    "laptop",
+    "headphones",
+    "charging cable",
+    "pen, paper",
+    "water bottle",
+    "snacks",
+  ],
+  "btn-shops": [
+    "shopping list",
+    "shopping bags",
+    "wallet",
+    "driver's license",
+    "car keys",
+  ],
+  "btn-camping": [
+    "swag",
+    "stove",
+    "dishes",
+    "food",
+    "drinks",
+    "clothes",
+    "table",
+    "chairs",
+  ],
+};
+
+function addAllItems(category) {
+  itemList.innerHTML = "";
+  let allItems = buttonsData[category];
+  allItems.forEach(
+    (item) =>
+      (itemList.innerHTML += `<div class="item"><span class="item-left"><span><span id="checked-icon" class="hidden">✅ </span><span id="unchecked-icon">⬜ </span></span><span class="item-text" id="item-text">${item}</span></span><i class="fa-solid fa-xmark fa-xl"></i></div>`)
+  );
+  saveData();
+}
+
+function handleBtnClick(event) {
+  event.preventDefault();
+  addAllItems(event.target.id);
+}
+
+let buttons = document.querySelector("#buttons");
+let btns = buttons.querySelectorAll("button");
+btns.forEach((btn) => {
+  btn.addEventListener("click", handleBtnClick);
+});
