@@ -3,14 +3,10 @@ body {
   text-align: center;
   min-height: 100vh;
   padding: 50px 25px;
-  background: radial-gradient(
-    780px at 37.8% 100.3%,
-    rgb(19, 55, 115) 2.2%,
-    rgb(32, 7, 80) 20.2%,
-    rgb(27, 88, 111) 58.6%,
-    rgb(115, 88, 44) 75%,
-    rgb(99, 19, 90) 89.6%,
-    rgb(12, 51, 76) 96.1%
+  background: linear-gradient(
+    to right,
+    rgba(27, 255, 188, 0.3),
+    rgba(220, 31, 255, 0.3)
   );
 }
 
@@ -20,14 +16,21 @@ body {
   margin: 50px auto;
   max-width: 500px;
   border-radius: 20px;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px -20px 40px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px -20px 40px;
 }
+
 h1 {
   font-size: 20px;
   text-transform: uppercase;
-  letter-spacing: 5px;
+  letter-spacing: 15px;
   font-weight: 900;
   padding: 10px;
+  background: linear-gradient(to right, #dc1fff, #1bffbc);
+  -webkit-background-clip: text;
+  color: transparent;
+  width: fit-content;
+  margin: 0 auto;
+  line-height: 2;
 }
 
 h2 {
