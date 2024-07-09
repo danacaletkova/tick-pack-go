@@ -160,11 +160,29 @@ form {
   display: flex;
 }
 
-.item-text {
-  padding: 0 10px;
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #eee;
+  color: transparent;
 }
 
-.checked {
+.icon-checked {
+  background: #1bffbc;
+  color: #dc1fff;
+}
+
+.item-text {
+  padding: 0 10px;
+  position: relative;
+}
+
+.text-checked {
   text-decoration: line-through;
   text-decoration-color: #999;
   text-decoration-thickness: 1px;
@@ -179,7 +197,7 @@ form {
 }
 
 .fa-xmark:hover {
-  color: #1bffbc;
+  color: #dc1fff;
 }
 
 footer {

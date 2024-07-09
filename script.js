@@ -1,23 +1,16 @@
 //adding items via form
 
-function handleIcon(item) {
+function handleCheck(item) {
   let itemLine = item.parentElement;
-  let checkedIcon = itemLine.querySelector("#checked-icon");
-  checkedIcon.classList.toggle("hidden");
-  let uncheckedIcon = itemLine.querySelector("#unchecked-icon");
-  uncheckedIcon.classList.toggle("hidden");
-}
-
-function handleText(item) {
-  let itemLine = item.parentElement.parentElement;
+  let icon = itemLine.querySelector("#icon");
+  icon.classList.toggle("icon-checked");
   let itemText = itemLine.querySelector("#item-text");
-  itemText.classList.toggle("checked");
+  itemText.classList.toggle("text-checked");
 }
 
 function handleItemClick(event) {
   if (event.target.tagName === "SPAN") {
-    handleIcon(event.target);
-    handleText(event.target);
+    handleCheck(event.target);
   } else if (event.target.tagName === "I") {
     event.target.parentElement.remove();
   }
@@ -29,7 +22,8 @@ itemList.addEventListener("click", handleItemClick);
 
 function addItem(item) {
   if (item != undefined) {
-    itemList.innerHTML += `<div class="item"><span class="item-left"><span><span id="checked-icon" class="hidden">✅ </span><span id="unchecked-icon">⬜ </span></span><span class="item-text" id="item-text">${item}</span></span><i class="fa-solid fa-xmark fa-xl"></i></div>`;
+    itemList.innerHTML += `<div class="item"><span class="item-left"><span class="icon" id="icon">&#10004</span><span class="item-text" id="item-text">${item}</span>
+</span><i class="fa-solid fa-xmark fa-xl"></i></div>`;
   }
 }
 
@@ -103,7 +97,8 @@ function addAllItems(category) {
   let allItems = buttonsData[category];
   allItems.forEach(
     (item) =>
-      (itemList.innerHTML += `<div class="item"><span class="item-left"><span><span id="checked-icon" class="hidden">✅ </span><span id="unchecked-icon">⬜ </span></span><span class="item-text" id="item-text">${item}</span></span><i class="fa-solid fa-xmark fa-xl"></i></div>`)
+      (itemList.innerHTML += `<div class="item"><span class="item-left"><span class="icon" id="icon">&#10004</span><span class="item-text" id="item-text">${item}</span>
+</span><i class="fa-solid fa-xmark fa-xl"></i></div>`)
   );
   saveData();
 }
