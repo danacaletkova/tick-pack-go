@@ -212,11 +212,25 @@ footer a {
 }
 
 footer a:hover {
-  font-weight: bold;
+  background: linear-gradient(to right, #dc1fff, #1bffbc);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 900;
 }
 
 .hidden {
   display: none;
+}
+
+@media (max-width: 550px) {
+  body {
+    padding: 15px;
+  }
+
+  .container {
+    padding: 15px;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 440px) {
