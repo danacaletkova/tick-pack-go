@@ -170,12 +170,25 @@ form {
   border-radius: 50%;
   background: #eee;
   color: transparent;
+  transition: all 100ms ease;
 }
 
 .icon-checked {
   background: #1bffbc;
   color: #dc1fff;
 }
+
+.xmark {
+  padding: 0 6px;
+  opacity: 0.6;
+  font-weight: 700;
+  transition: all 100ms ease;
+}
+
+.xmark:hover {
+  color: #dc1fff;
+}
+
 
 .item-text {
   padding: 0 10px;
@@ -187,17 +200,6 @@ form {
   text-decoration-color: #999;
   text-decoration-thickness: 1px;
   color: #999;
-}
-
-.fa-xmark {
-  line-height: 16px;
-  padding: 4px;
-  opacity: 0.8;
-  transition: all 100ms ease;
-}
-
-.fa-xmark:hover {
-  color: #dc1fff;
 }
 
 footer {

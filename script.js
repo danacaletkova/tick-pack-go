@@ -9,9 +9,9 @@ function handleCheck(item) {
 }
 
 function handleItemClick(event) {
-  if (event.target.tagName === "SPAN") {
+  if (event.target.parentElement.id === "item-left") {
     handleCheck(event.target);
-  } else if (event.target.tagName === "I") {
+  } else if (event.target.id === "xmark") {
     event.target.parentElement.remove();
   }
   saveData();
@@ -22,8 +22,8 @@ itemList.addEventListener("click", handleItemClick);
 
 function addItem(item) {
   if (item != undefined) {
-    itemList.innerHTML += `<div class="item"><span class="item-left"><span class="icon" id="icon">&#10004</span><span class="item-text" id="item-text">${item}</span>
-</span><i class="fa-solid fa-xmark fa-xl"></i></div>`;
+    itemList.innerHTML += `<div class="item"><span class="item-left" id="item-left"><span class="icon" id="icon">&#10004</span><span class="item-text" id="item-text">${item}</span>
+</span><span class="xmark" id="xmark">&#10006</span></div>`;
   }
 }
 
@@ -97,8 +97,8 @@ function addAllItems(category) {
   let allItems = buttonsData[category];
   allItems.forEach(
     (item) =>
-      (itemList.innerHTML += `<div class="item"><span class="item-left"><span class="icon" id="icon">&#10004</span><span class="item-text" id="item-text">${item}</span>
-</span><i class="fa-solid fa-xmark fa-xl"></i></div>`)
+      (itemList.innerHTML += `<div class="item"><span class="item-left" id="item-left"><span class="icon" id="icon">&#10004</span><span class="item-text" id="item-text">${item}</span>
+</span><span class="xmark" id="xmark">&#10006</span></div>`)
   );
   saveData();
 }
